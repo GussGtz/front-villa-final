@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import Card from '../src/card';
+import '../src/App.css'; // Asume que estás utilizando CSS puro
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <div className="card-container">
+        <Card
+          title="TEMPERATURA"
+          content="32 grados"
+          borderColor="#FF4500" // Este es el color del borde, puedes cambiarlo según necesites
+        />
+        {/* Repite el componente Card para los demás parámetros */}
+      </div>
     </div>
   );
 }

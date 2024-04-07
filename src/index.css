@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.app-container {
+  width: 1000%; /* Ajusta este valor al deseado, por ejemplo, 90% para hacerlo más ancho */
+  margin: auto; /* Esto centrará el contenedor si hay espacio suficiente a los lados */
+  /* Asegúrate de mantener o ajustar otras propiedades aquí según sea necesario */
+}

@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Fondo general más claro */
+  width: 100%; /* Ocupará el ancho total de la pantalla */
+  margin: 20px 0; /* Esto mantendrá un margen vertical pero eliminará el margen horizontal */
+  max-width: none; /* Esto elimina el límite máximo de ancho */
   display: flex;
   flex-direction: column;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 20px;
+  background-color: #0056b3; /* Azul más oscuro para contraste */
   color: white;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-icon {
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar h1 {
+  font-size: 20px; /* Ajustar según necesidad */
+  margin: 0;
+}
+
+.action-button {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+.slider {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.parameter-value, .app-header p, .parameter {
+  color: #333; /* Oscuro */
+}
+
+.app-header, .app-content, .parameter-container {
+  padding: 20px;
+  background-color: #ffffff; /* Blanco para contrastar */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.app-content {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.parameter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Espacio entre parámetros */
+}
+.parameter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.parameter-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Ajusta el margen según necesites */
+}
+
+
+.icon {
+  color: #007bff; /* Azul */
+  font-size: 20px; /* Tamaño ajustado */
+}
+
+.parameter .slider:focus {
+  outline: none; /* Remueve el outline al hacer foco */
+}
+
+/* Añadir transiciones suaves a los iconos */
+.icon:hover {
+  color: #0056b3;
+  transition: color 0.3s ease;
+}
+
+/* Mejora en la visualización de los valores de los parámetros */
+.parameter-value {
+  background-color: #e9ecef; /* Gris suave */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.navbar-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-button:hover {
+  color: #ccc;
 }
