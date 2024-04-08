@@ -1,0 +1,83 @@
+.subtitulo {
+    text-align: center;
+  }
+  
+  h3 {
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  
+  h2 {
+    letter-spacing: 5px;
+    font-weight: 300;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .incubation-info {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .incubation-card {
+    border: 5px solid #76a8f8;
+    border-radius: 20px;
+    padding: 20px;
+    width: 800px;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .card {
+    border: 2px solid #76a8f8;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); 
+  }
+  
+  .button-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3569a156;
+    transition: width 0.5s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card:hover .button-bar {
+    width: 100%;
+  }
+  

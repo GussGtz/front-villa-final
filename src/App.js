@@ -1,22 +1,20 @@
-// App.js
 import React from 'react';
-import Card from '../src/card';
-import '../src/App.css'; // Asume que estás utilizando CSS puro
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Inicio from '../src/pages/Inicio';
+import Gallina from '../src/pages/Gallina'; 
+import Pato from '../src/pages//Pato';
+import Codorniz from '../src/pages/Codorniz';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <div className="card-container">
-        <Card
-          title="TEMPERATURA"
-          content="32 grados"
-          borderColor="#FF4500" // Este es el color del borde, puedes cambiarlo según necesites
-        />
-        {/* Repite el componente Card para los demás parámetros */}
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/gallina" element={<Gallina />} />
+        <Route path="/pato" element={<Pato />} />
+        <Route path="/codorniz" element={<Codorniz />} />
+      </Routes>
+    </Router>
   );
 }
 
