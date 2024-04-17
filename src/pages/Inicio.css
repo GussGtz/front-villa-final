@@ -1,83 +1,225 @@
 .subtitulo {
-    text-align: center;
-  }
-  
-  h3 {
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-  
-  h2 {
-    letter-spacing: 5px;
-    font-weight: 300;
-  }
-  
-  .dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .incubation-info {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .incubation-card {
-    border: 5px solid #76a8f8;
-    border-radius: 20px;
-    padding: 20px;
-    width: 800px;
-  }
-  
-  .cards-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-  
-  .card {
-    border: 2px solid #76a8f8;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    width: 200px;
-    text-align: center;
-    position: relative;
-    overflow: hidden; 
-  }
-  
-  .card h2 {
-    margin-bottom: 10px;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; 
-  }
-  
-  .card:hover img {
-    transform: scale(1.1); 
-  }
-  
-  .button-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #3569a156;
-    transition: width 0.5s ease;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .card:hover .button-bar {
-    width: 100%;
-  }
-  
+  text-align: center;
+}
+
+h4 {
+  margin-left: 20px;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+h3 {
+  margin-left: 20px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.incubation-info {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  height: 120px;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px; /* Margen entre las tarjetas */
+  width: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: #dfeeff;
+}
+
+.card img {
+  width: 50px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del modal */
+  border-radius: 20px ;
+}
+
+.card-content h4 {
+  margin-right: 10px;
+}
+
+.incubation-card {
+  display: flex;
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.189);
+  background-color: #fff;
+}
+
+.incubation-details {
+  flex: 1;
+}
+
+.incubation-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.incubation-image img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.button-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #accbe914;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.card:hover .button-bar {
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del modal */
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #accbe9;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #7ba7e0;
+}
+
+.alert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del modal */
+  max-width: 400px;
+  text-align: center;
+}
+
+.alert-modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.alert-modal-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.alert-modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c; /* Rojo */
+  color: white;
+  cursor: pointer;
+}
+
+.alert-modal-buttons button:hover {
+  background-color: #c0392b; /* Rojo más oscuro al pasar el cursor */
+}
+
+.detener-incubacion-button {
+  text-align: center;
+  background-color: #e74c3c; /* Rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px; 
+  margin-left: 500px;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease; /* Agregar transición */
+}
+
+.detener-incubacion-button:hover {
+  background-color: #c0392b; /* Rojo más oscuro al pasar el cursor */
+  transform: translate(-50%, -5px); /* Desplazar hacia arriba al pasar el cursor */
+}
+
+.temperature-card {
+  width: 300px; /* Ancho de la tarjeta de temperatura */
+  margin-left: 60px; /* Espacio entre la tarjeta de detalles y la tarjeta de temperatura */
+  margin-right: 10px; /* Margen derecho para separar las tarjetas */
+}
